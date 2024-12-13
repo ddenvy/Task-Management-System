@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option csharp_namespace = "CommentService";
+
+package comment;
+
+service CommentService {
+    rpc AddComment (AddCommentRequest) returns (CommentResponse);
+    rpc GetComments (GetCommentsRequest) returns (CommentsResponse);
+}
+
+message AddCommentRequest {
+    string task_id = 1;
+    string user_id = 2;
+    string text = 3;
+}
+
+message CommentResponse {
+    string comment_id = 1;
+    string text = 2;
+    string user_id = 3;
+}
+
+message GetCommentsRequest {
+    string task_id = 1;
+}
+
+message CommentsResponse {
+    repeated CommentResponse comments = 1;
+}

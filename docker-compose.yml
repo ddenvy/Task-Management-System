@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  user_service:
+    build: ./UserService
+    ports:
+      - "5004:5004"
+  task_service:
+    build: ./TaskService
+    ports:
+      - "5002:5002"
+  tracking_service:
+    build: ./TrackingService
+    ports:
+      - "5003:5003"
+  comment_service:
+    build: ./CommentService
+    ports:
+      - "5001:5001"

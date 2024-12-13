@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option csharp_namespace = "TrackingService";
+
+package tracking;
+
+service TrackingService {
+    rpc UpdateTaskStatus (UpdateTaskStatusRequest) returns (UpdateTaskStatusResponse);
+    rpc GetTaskStatus (GetTaskStatusRequest) returns (GetTaskStatusResponse);
+}
+
+message UpdateTaskStatusRequest {
+    string task_id = 1;
+    string status = 2;
+}
+
+message UpdateTaskStatusResponse {
+    bool success = 1;
+}
+
+message GetTaskStatusRequest {
+    string task_id = 1;
+}
+
+message GetTaskStatusResponse {
+    string task_id = 1;
+    string status = 2;
+}
