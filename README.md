@@ -21,7 +21,11 @@
    docker-compose up --build
 
 ## Тесты:
-1. Создание пользователя: grpcurl -plaintext -d '{"name": "John", "email": "john@example.com", "password": "123456"}' localhost:5004 user.UserService/CreateUser
-2. Создание задачи: grpcurl -plaintext -d '{"title": "Task 1", "description": "Description", "user_id": "1"}' localhost:5002 task.TaskService/CreateTask
-3. Получение статуса задачи: grpcurl -plaintext -d '{"task_id": "1"}' localhost:5003 tracking.TrackingService/GetTaskStatus
-4. Добавление комментария: grpcurl -plaintext -d '{"task_id": "1", "user_id": "1", "text": "Comment 1"}' localhost:5001 comment.CommentService/AddComment
+ Установите Postman
+•  Создайте новый gRPC запрос для каждого сервиса и подключите proto файл каждого сервиса
+•  Настройки для всех запросов:
+•  Server Reflection: off
+•  SSL: off (Plaintext)
+•  Используйте соответствующие порты для каждого сервиса
+
+
