@@ -1,31 +1,33 @@
 # Task Management System
+A task management system built on a microservice architecture using gRPC and Docker.
+Services
 
-Это система управления задачами, построенная на микросервисной архитектуре с использованием gRPC и Docker.
+User Service: Handles user management.
+Task Service: Manages tasks.
+Tracking Service: Tracks task statuses.
+Comment Service: Manages task comments.
 
-## Сервисы
-1. **User Service**: Управление пользователями.
-2. **Task Service**: Управление задачами.
-3. **Tracking Service**: Отслеживание статусов задач.
-4. **Comment Service**: Управление комментариями к задачам.
+# Local Hosts
 
-## Локальные хосты
-1. UserService: Now listening on: http://0.0.0.0:5004
-2. TaskService: Now listening on: http://0.0.0.0:5002
-3. TrackingService: Now listening on: http://0.0.0.0:5003
-4. CommentService: Now listening on: http://0.0.0.0:5001
+User Service: Now listening on: http://0.0.0.0:5004
+Task Service: Now listening on: http://0.0.0.0:5002
+Tracking Service: Now listening on: http://0.0.0.0:5003
+Comment Service: Now listening on: http://0.0.0.0:5001
 
+# Setup
+
+Build and run:docker-compose up --build
 
 
-## Запуск
-1. Сборка и запуск:
-   docker-compose up --build
 
-## Тесты:
-1. Установите Postman
-2. Создайте новый gRPC запрос для каждого сервиса и подключите proto файл каждого сервиса
-3. Настройки для всех запросов:
-4. Server Reflection: off
-5. SSL: off (Plaintext)
-6. Используйте соответствующие порты для каждого сервиса
+# Testing
 
+Install Postman.
+Create a new gRPC request for each service and import the respective proto file.
+Configure all requests with:
+Server Reflection: off
+SSL: off (Plaintext)
+
+
+# Use the corresponding ports for each service.
 
